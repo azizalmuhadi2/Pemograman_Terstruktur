@@ -1,0 +1,24 @@
+cstring - This is a header file in C++ that provides functions to manipulate strings and arrays of characters.
+
+cin.get() - This function is used to get a single character from the input stream. It reads the next character 
+from the stream and returns it as an integer.
+
+cin.ignore() - This function is used to ignore a specific number of characters from the input stream. It is 
+commonly used to ignore newline characters that are left in the input stream after reading input.
+
+cin.putback() - This function is used to put a single character back into the input stream. It is commonly used 
+to put back a character that was read from the stream but was not used.
+
+strlen() - This function is used to find the length of a null-terminated string (a string that ends with a null character).
+
+strcat() - This function is used to concatenate two null-terminated strings. It takes two arguments, the first 
+argument is the destination string where the concatenated string will be stored and the second argument is the source string.
+
+strtol() - This function is used to convert a string to a long integer. It takes two arguments, the first argument is 
+the string to be converted and the second argument is a pointer to a character that points to the first character that is not part of the number.
+
+strtoul() - This function is similar to strtol(), but it is used to convert a string to an unsigned long integer.
+
+strtod() - This function is used to convert a string to a double-precision floating-point number. It takes two arguments, 
+the first argument is the string to be converted and the second argument is a pointer to a character that points 
+to the first character that is not part of the number.
