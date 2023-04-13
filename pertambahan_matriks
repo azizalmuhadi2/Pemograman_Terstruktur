@@ -1,0 +1,40 @@
+#include<iostream>  //Include input/output library
+using namespace std;
+
+int main(){
+    int baris1, kolom1;  // Declare integer variables baris1 and kolom1
+    cin>>baris1>>kolom1;  // Read in values for baris1 and kolom1 from the user
+    int matriks1[baris1][kolom1];  // Declare 2D array matriks1 with size of baris1 x kolom1
+    for (int i=0; i<baris1; i++){  // Loop through rows of matriks1
+        for(int j=0; j<kolom1; j++){  // Loop through columns of matriks1
+            cin>>matriks1[i][j];  // Read in values for each element of matriks1 from the user
+        }
+    }
+    int baris2, kolom2;  // Declare integer variables baris2 and kolom2
+    cin>>baris2>>kolom2;  // Read in values for baris2 and kolom2 from the user
+    int matriks2[baris2][kolom2];  // Declare 2D array matriks2 with size of baris2 x kolom2
+    for (int i=0; i<baris2; i++){  // Loop through rows of matriks2
+        for(int j=0; j<kolom2; j++){  // Loop through columns of matriks2
+            cin>>matriks2[i][j];  // Read in values for each element of matriks2 from the user
+        }
+    }
+    if(kolom1!=baris2){  // Check if multiplication of matriks1 and matriks2 can be performed
+        cout<<"Perhitungan tidak dapat dilakukan ";  // Print error message if not possible
+    }else{  // Otherwise, proceed with multiplication
+        int hasil[baris1][kolom2];  // Declare 2D array hasil with size of baris1 x kolom2 to store the result of multiplication
+        for(int i=0; i<baris1; i++){  // Loop through rows of matriks1
+            for(int j=0; j<kolom2; j++){  // Loop through columns of matriks2
+            hasil[i][j]=0;  // Initialize the value of hasil[i][j] to 0
+                for(int k=0; k<baris2; k++){  // Loop through rows of matriks2
+                    hasil[i][j]+=matriks1[i][k]*matriks2[k][j];  // Perform multiplication and store the result in hasil[i][j]
+                }
+            }
+        }
+        for (int i=0; i<baris1; i++){  // Loop through rows of hasil
+            for(int j=0; j<kolom2; j++){  // Loop through columns of hasil
+                cout<<hasil[i][j]<<" ";  // Print the value of each element of hasil
+            }
+            cout<<endl;  // Move to next line after printing each row of hasil
+            }
+        }
+}
